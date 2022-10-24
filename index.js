@@ -24,7 +24,7 @@ const App = async () => {
   if(!process.argv[2]){
     throw new Error("Un nom de domaine (ou sous-domaine) doit être spécifié lors de l'exécution de la commande. Vous pouvez par exemple exécuter `node index.js monndd.fr`");
   }
-  ['CLOUDFLARE_AUTH_EMAIL', 'CLOUDFLARE_AUTH_KEY', 'CLOUDFLARE_API_ROOT', 'CLOUDFLARE_ZONE_ID', 'CLOUDFLARE_RECORD_ID'].forEach((envKey) => {
+  ['CLOUDFLARE_AUTH_EMAIL', 'CLOUDFLARE_AUTH_KEY', 'CLOUDFLARE_API_ROOT'].forEach((envKey) => {
     if(!process.env[envKey]){
       throw new Error(`la variable d'environement ${envKey} doit être définie.`);
     }
