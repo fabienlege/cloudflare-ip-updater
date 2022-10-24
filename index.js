@@ -66,8 +66,9 @@ const App = async () => {
     throw e;
   }
 
-  console.log('Cloudflare successfully updated')
+  console.log(`${(new Date).toLocaleString()} : Cloudflare successfully updated`)
 }
 
 // Run app
-App();
+App(); //first run on startup
+setInterval(App, 1000*60); //run every hour
